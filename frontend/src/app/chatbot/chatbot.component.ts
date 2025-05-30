@@ -26,6 +26,7 @@ interface ChatMessage {
   body: string
 }
 
+
 interface MessageActions {
   response: string
   namequery: string
