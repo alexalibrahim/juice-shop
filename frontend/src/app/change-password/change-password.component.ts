@@ -26,6 +26,7 @@ export class ChangePasswordComponent {
   public repeatNewPasswordControl: FormControl = new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(20), matchValidator(this.newPasswordControl)])
   public error: any
   public confirmation: any
+  private fuzzyRouteSolving: any
 
   constructor (private readonly userService: UserService, private readonly formSubmitService: FormSubmitService, private readonly translate: TranslateService) { }
 
