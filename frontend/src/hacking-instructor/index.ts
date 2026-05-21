@@ -145,7 +145,7 @@ async function waitForCancel (element: HTMLElement) {
   })
 }
 
-export function hasInstructions (challengeName: String): boolean {
+export function hasInstructions (challengeName: string): boolean {
   return challengeInstructions.find(({ name }) => name === challengeName) !== undefined
 }
 

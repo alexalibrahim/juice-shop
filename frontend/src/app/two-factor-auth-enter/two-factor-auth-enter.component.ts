@@ -26,10 +26,10 @@ interface TokenEnterFormFields {
 })
 export class TwoFactorAuthEnterComponent {
   public twoFactorForm: FormGroup = new FormGroup({
-    token: new FormControl('', [Validators.minLength(6), Validators.maxLength(6), Validators.required, Validators.pattern('^[\\d]{6}$')])
+    token: new FormControl('', [Validators.minLength(6), Validators.maxLength(6), Validators.required, Validators.pattern(String.raw`^[\d]{6}$`)])
   })
 
-  public errored: Boolean = false
+  public errored: boolean = false
 
   constructor (
     private readonly twoFactorAuthService: TwoFactorAuthService,
